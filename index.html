@@ -92,8 +92,9 @@ function create() {
 	 {
              //  Create a mice inside of the 'mouse' group
              var mouse = mice.create(i * 70, 0, 'mouse');
-
-             /* Let gravity do its thing*/
+	     mouse.inputEnabled = true;
+	     mouse.input.useHandCursor = true;
+	     /* Let gravity do its thing*/
              /* mouse.body.gravity.y = 300;*/
 
              //  This just gives each mice a slightly random bounce value
