@@ -34,9 +34,10 @@
 
     <script type="text/javascript">
 
-     var game = new Phaser.Game(1040, 720, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+     var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
      function preload() {
+
 	 game.load.image('sky', 'assets/background.gif');
 	 game.load.image('ground', 'assets/platform.png');
 	 game.load.image('mouse', 'assets/mouse.png');
@@ -45,6 +46,7 @@
      }
 
      function create() {
+	 game.add.sprite(0,0,'rick');
      }
 
      function update() {
