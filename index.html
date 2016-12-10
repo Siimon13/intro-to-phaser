@@ -77,7 +77,7 @@
 	 ledge.body.immovable = true;
 
 	 // The player and its settings
-	 player = game.add.sprite(32, game.world.height - 150, 'rick');
+	 player = game.add.sprite(32, game.world.height - 150, 'mouse');
 
 	 //  We need to enable physics on the player
 	 game.physics.arcade.enable(player);
@@ -103,7 +103,7 @@
 	 for (var i = 0; i < 12; i++)
 	     {
 		 //  Create a mice inside of the 'mouse' group
-		 var mouse = mice.create(i * 70, 0, 'mouse');
+		 var mouse = mice.create(i * 70, 0, 'rick');
 
 		 //  Let gravity do its thing
 		 mouse.body.gravity.y = 300;
