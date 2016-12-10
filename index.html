@@ -116,10 +116,14 @@ function create() {
 
      //  Collide the player and the mice with the platforms
      game.physics.arcade.collide(player, platforms);
-     game.physics.arcade.collide(mice, platforms);
+     game.physics.arcade.collide(platforms, mice,killRock,null,this);
 
      //  Checks to see if the player overlaps with any of the mice, if he does call the collectMouse function
-     /* game.physics.arcade.overlap(ledge, mice, collectMouse, null, this);*/
+     game.physics.arcade.overlap(mice, player, killPlayer, null, this);
+     game.physics.arcade.overlap(platforms, player, killPlayer, null, this);
+     /* game.physics.arcade.overlap(platforms, player, killRock, null, this);*/
+
+     /* game.physics.arcade.overlap(ledge2, mice, collectMouse, null, this);*/
 
      
      //  Reset the players velocity (movement)
@@ -155,16 +159,17 @@ function create() {
 
  }
 
- function collectMouse (player, mouse) {
-    
+ function killRock (platforms, mouse) {
      // Removes the mouse from the screen
      mouse.kill();
-
-     //  Add and update the score
-     score += 10;
-     scoreText.text = 'Score: ' + score;
-
  }
+
+
+ function killPlayer (player, mouse) {
+     // Removes the mouse from the screen
+     player.kill();
+ }
+
 
  function rockFall(mouse) {
      mouse.body.gravity.y = 100;   
