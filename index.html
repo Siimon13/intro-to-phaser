@@ -45,7 +45,19 @@
 
      }
 
+     var platforms;
+
      function create() {
+	 game.physics.startSystem(Phaser.Physics.ARCADE); //Activats physics
+
+	 game.add.sprite(0, 0, 'sky');  //Background
+
+	 platforms = game.add.group(); //Platforms
+
+	 platforms = game.add.group(); //creating a group to contain ledges and jumping actions
+
+	 platforms.enableBody = true;
+
 	 game.add.sprite(0,0,'rick');
      }
 
