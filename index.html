@@ -119,7 +119,7 @@ function create() {
      game.physics.arcade.collide(mice, platforms);
 
      //  Checks to see if the player overlaps with any of the mice, if he does call the collectMouse function
-     game.physics.arcade.overlap(platforms, mice, collectMouse, null, this);
+     game.physics.arcade.overlap(ledge, mice, collectMouse, null, this);
 
      
      //  Reset the players velocity (movement)
