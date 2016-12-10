@@ -91,7 +91,7 @@ function create() {
      for (var i = 0; i < 12; i++)
 	 {
              //  Create a mice inside of the 'mouse' group
-             var mouse = mice.create(i * 70, 0, 'mouse',rockFall);
+             var mouse = mice.create(i * 70, 0, 'mouse',rockFall, this);
 	     mouse.inputEnabled = true;
 	     mouse.input.useHandCursor = true;
 	     
