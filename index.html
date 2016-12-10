@@ -95,7 +95,7 @@ function create() {
 	     mouse.inputEnabled = true;
 	     mouse.input.useHandCursor = true;
 	     
-	     
+	     mouse.events.onInputDown.add(rockFall,this);
 	     /* Let gravity do its thing*/
              /* mouse.body.gravity.y = 300;*/
 
@@ -108,7 +108,7 @@ function create() {
 
      //  Our controls.
      cursors = game.input.keyboard.createCursorKeys();
-     mice.events.onInputDown.add(rockFall,this);
+     /* mice.events.onInputDown.add(rockFall,this);*/
     
  }
 
