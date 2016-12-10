@@ -57,22 +57,22 @@ function create() {
     ground.body.immovable = true;
 
     //  Now let's create two ledges
-    var ledge = platforms.create(400, 400, 'ground');
-    ledge.body.immovable = true;
+     var ledge1 = platforms.create(400, 400, 'ground');
+     ledge1.body.immovable = true;
 
-    ledge = platforms.create(-150, 250, 'ground');
-    ledge.body.immovable = true;
+     ledge2 = platforms.create(-150, 250, 'ground');
+     ledge2.body.immovable = true;
 
-    // The player and its settings
-    player = game.add.sprite(32, game.world.height - 150, 'rick');
+     // The player and its settings
+     player = game.add.sprite(32, game.world.height - 150, 'rick');
 
-    //  We need to enable physics on the player
-    game.physics.arcade.enable(player);
+     //  We need to enable physics on the player
+     game.physics.arcade.enable(player);
 
-    //  Player physics properties. Give the little guy a slight bounce.
-    player.body.bounce.y = 0.2;
-    player.body.gravity.y = 400;
-    player.body.collideWorldBounds = true;
+     //  Player physics properties. Give the little guy a slight bounce.
+     player.body.bounce.y = 0.2;
+     player.body.gravity.y = 400;
+     player.body.collideWorldBounds = true;
 
      player.inputEnabled = true;
      player.input.useHandCursor = true;
@@ -119,7 +119,7 @@ function create() {
      game.physics.arcade.collide(mice, platforms);
 
      //  Checks to see if the player overlaps with any of the mice, if he does call the collectMouse function
-     game.physics.arcade.overlap(ledge, mice, collectMouse, null, this);
+     /* game.physics.arcade.overlap(ledge, mice, collectMouse, null, this);*/
 
      
      //  Reset the players velocity (movement)
